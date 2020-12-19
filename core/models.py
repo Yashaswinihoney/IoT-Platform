@@ -1,7 +1,5 @@
 from django.db import models
 
-<<<<<<< HEAD
-=======
 class ProductTag(models.Model):
     name = models.CharField(max_length=32)
     slug = models.SlugField(max_length=48)
@@ -29,5 +27,4 @@ class ProductImage(models.Model):
 
     
 
->>>>>>> 93a9b19... Long Time no C
 # Create your models here.

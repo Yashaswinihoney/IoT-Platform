@@ -9,14 +9,9 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-<<<<<<< HEAD
-import os
-from pathlib import Path
-=======
 
 from pathlib import Path
 import os
->>>>>>> 93a9b19... Long Time no C
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,11 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
-SECRET_KEY = '%1)hk_e@9%a5q5yvq_)y_zq1y^=ax+*-5av@m06+l6%u27(^jn'
-=======
 SECRET_KEY = '%7m_h_0c^$zhs0)wl8een4ln*ck2fku&x_^6g6!gxpn-4nwb+l'
->>>>>>> 93a9b19... Long Time no C
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,37 +32,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'core',
-<<<<<<< HEAD
-    'accounts',
-=======
     'authmng',
->>>>>>> 93a9b19... Long Time no C
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'channels',
 ]
 
-ASGI_APPLICATION = "Platform.asgi.application"
-
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
-        },
-    },
-}
-
-=======
-]
-
->>>>>>> 93a9b19... Long Time no C
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -87,11 +58,7 @@ ROOT_URLCONF = 'Platform.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
-=======
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
->>>>>>> 93a9b19... Long Time no C
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -104,8 +71,17 @@ TEMPLATES = [
     },
 ]
 
+ASGI_APPLICATION = 'Platform.asgi.application'
 WSGI_APPLICATION = 'Platform.wsgi.application'
 
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -135,11 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-<<<<<<< HEAD
-
-=======
 AUTH_USER_MODEL = 'authmng.User'
->>>>>>> 93a9b19... Long Time no C
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -157,11 +129,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-<<<<<<< HEAD
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-=======
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
@@ -203,4 +170,3 @@ LOGGING = {
         },
     },
 }
->>>>>>> 93a9b19... Long Time no C
