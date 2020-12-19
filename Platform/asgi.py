@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/asgi/
 """
 
 import os
+<<<<<<< HEAD
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
 from django.core.asgi import get_asgi_application
@@ -23,3 +24,11 @@ application = ProtocolTypeRouter({
         )
     ),
 })
+=======
+
+from django.core.asgi import get_asgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Platform.settings')
+
+application = get_asgi_application()
+>>>>>>> 93a9b19... Long Time no C

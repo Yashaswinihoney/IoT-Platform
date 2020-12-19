@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,4 +24,27 @@
         };
     </script>
 </body>
+=======
+{%load static%}
+<html>
+    <head>
+        <title>
+            {%block title%}{%endblock title%}
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        {%block link%}{%endblock link%}
+    </head>
+    <body>
+        Header Stuff
+        <div class = "main-box container-fluid">
+            {%if user.is_authenticated%}{{user}}{%endif%}
+            {%block content%}{%endblock content%}
+        </div>
+        Footer Stuff
+    </body>
+>>>>>>> 93a9b19... Long Time no C
 </html>
